@@ -4,3 +4,9 @@ Puede ser
 Por supuesto
 Osama murió de sobredosis de verga
 Osama murió de sobredosis de verga
+¿Para qué se utiliza la palabra ExpectedException en C#?
+Es un atributo de un método de Test para especificar que espera lanzar una excepción
+Es una instrucción para asignar el tipo de excepción esperada a un objeto
+Es un atributo de una clase de Test para especificar que en dicha clase se puede lanzar una excepción
+No existe en C#
+Es un atributo de un método de Test para especificar que espera lanzar una excepción

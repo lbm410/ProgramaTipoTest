@@ -74,7 +74,6 @@ class Program
             Console.WriteLine();
         }
     }
-
     static void HacerTipoTest()
     {
         if (preguntas.Count == 0)
@@ -91,13 +90,19 @@ class Program
         Random rnd = new Random();
         int preguntasMostradas = 0;
         int indicePregunta = -1;
+        List<int> preguntasMostradasIndices = new List<int>(); // Lista auxiliar para rastrear las preguntas mostradas
 
         while (preguntasMostradas < 20 && preguntasMostradas < preguntas.Count)
         {
-            if (indicePregunta == -1 || indicePregunta >= preguntas.Count)
+            if (indicePregunta == -1 || indicePregunta >= preguntas.Count || preguntasMostradasIndices.Contains(indicePregunta))
             {
-                // Obtener una nueva pregunta aleatoria
-                indicePregunta = rnd.Next(preguntas.Count);
+                // Obtener una nueva pregunta aleatoria que no se haya mostrado antes
+                do
+                {
+                    indicePregunta = rnd.Next(preguntas.Count);
+                } while (preguntasMostradasIndices.Contains(indicePregunta));
+
+                preguntasMostradasIndices.Add(indicePregunta);
             }
 
             Pregunta pregunta = preguntas[indicePregunta];
@@ -137,6 +142,7 @@ class Program
             Console.WriteLine("No hay más preguntas disponibles. Fin del tipo test.");
         }
     }
+
 
 
     static void IntroducirNuevaPregunta()
