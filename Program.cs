@@ -25,7 +25,7 @@ class Program
             Console.WriteLine("3. Eliminar pregunta");
             Console.WriteLine("4. Listado de preguntas");
             Console.WriteLine("5. Preguntar a ChatGPT");
-            Console.WriteLine("6. Salir");
+            Console.WriteLine("0. Salir");
             Console.Write("Seleccione una opción: ");
             string opcion = Console.ReadLine();
 
@@ -46,7 +46,7 @@ class Program
                 case "5":
                     PreguntarAChatGPT();
                     break;
-                case "6":
+                case "0":
                     salir = true;
                     break;
                 default:
@@ -293,7 +293,7 @@ class Program
         }
     }
 
-    static async void PreguntarAChatGPT()
+    static void PreguntarAChatGPT()
     {
         Console.Clear();
         Console.WriteLine("==== Preguntar a ChatGPT ====");
@@ -311,18 +311,23 @@ class Program
 
         string preguntaCompleta = $"{enunciado}\n{string.Join("\n", opciones)}\nDime cuál es la respuesta correcta.";
 
-        string respuestaChat = await chatClient.Preguntar(preguntaCompleta);
+        string respuestaChat = chatClient.Preguntar(preguntaCompleta).Result;
 
         Console.WriteLine("\nRespuesta de ChatGPT:");
         Console.WriteLine(respuestaChat);
         Console.WriteLine();
+
+        // Esperar hasta que se presione Enter para volver al menú
+        Console.WriteLine("Presione Enter para volver al menú.");
+        Console.ReadLine();
     }
+
 }
 
 class ChatClient
 {
     private const string OpenAIChatEndpoint = "https://api.openai.com/v1/chat/completions";
-    private const string OpenAIApiKey = "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";
+    private const string OpenAIApiKey = "tuKey";
 
     public async Task<string> Preguntar(string pregunta)
     {
