@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UgOeh4Bd2AizEzdWu0sKhuFfaW/1s/U0+qftcHLGBr4/G4HWXtgw0BE2rnSlGz1ofyn4rJZSZBhq+MlG7n/x6g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lucas\\source\\repos\\testpss\\TipoTestPSS\\ConsolaApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas\\.nuget\\packages\\sixlabors.imagesharp\\3.0.1\\sixlabors.imagesharp.3.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
