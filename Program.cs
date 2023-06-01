@@ -89,11 +89,14 @@ class Program
         // Obtener preguntas aleatorias hasta un máximo de 20
         Random rnd = new Random();
         int preguntasMostradas = 0;
+        int preguntasImp = preguntasMostradas + 1;
         int indicePregunta = -1;
         List<int> preguntasMostradasIndices = new List<int>(); // Lista auxiliar para rastrear las preguntas mostradas
 
         while (preguntasMostradas < 20 && preguntasMostradas < preguntas.Count)
         {
+            Console.WriteLine("==== Pregunta " + preguntasImp + "====");
+            preguntasImp++;
             if (indicePregunta == -1 || indicePregunta >= preguntas.Count || preguntasMostradasIndices.Contains(indicePregunta))
             {
                 // Obtener una nueva pregunta aleatoria que no se haya mostrado antes
