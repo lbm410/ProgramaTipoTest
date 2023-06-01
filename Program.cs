@@ -126,7 +126,7 @@ class Program
             }
             else
             {
-                Console.WriteLine($"Respuesta incorrecta. La respuesta correcta es: {pregunta.RespuestaCorrecta}");
+                Console.WriteLine($"Respuesta incorrecta. La respuesta correcta es: {pregunta.RespuestaCorrecta}" + "\n");
             }
 
             preguntasMostradas++;
@@ -135,11 +135,11 @@ class Program
 
         if (preguntasMostradas >= 20)
         {
-            Console.WriteLine("Se han mostrado 20 preguntas. Fin del tipo test.");
+            Console.WriteLine("Se han mostrado 20 preguntas. Fin del tipo test." + "\n");
         }
         else
         {
-            Console.WriteLine("No hay más preguntas disponibles. Fin del tipo test.");
+            Console.WriteLine("No hay más preguntas disponibles. Fin del tipo test." + "\n");
         }
     }
 
