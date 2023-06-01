@@ -10,3 +10,33 @@ Es una instrucción para asignar el tipo de excepción esperada a un objeto.
 Es un atributo de una clase de Test para especificar que en dicha clase se puede lanzar una excepción.
 No existe en C#.
 Es un atributo de un método de Test para especificar que espera lanzar una excepción.
+Teniendo en cuenta la definición de la clase File que se muestra a continuación, ¿cuál sería la el resultado de llamar al método Read con parámetros de tipo string?class File<T>{void Read(string path, string text) ()void Read(T path, string text) {}}
+No se pueden crear estos dos métodos en una misma clase.
+Se ejecutará el método void Read(string path, string text).
+Se ejecutará el método void Read(T path, string text).
+Se ejecutarán ambos métodos según el orden de declaración.
+Se ejecutará el método void Read(string path, string text).
+Si obj1 y obj2 son dos instancias distintas de la clase Object, ¿Cuál sería el resultado de la instrucción (obj1==obj2)?
+Podría ser verdadero si obj1 y obj2 son distintos de null.
+Podría ser verdadero si se sobre-escribe el operador ==.
+Es verdadero solo si obj1 y obj2 son igual a null.
+Es falso siempre.
+Podría ser verdadero si obj1 y obj2 son distintos de null.
+¿Se puede especificar en C# una restricción a un genérico?
+Si mediante la instrucción where.
+Si mediante un atributo.
+Si mediante herencia.
+No se puede, los genéricos no tienen restricciones, por eso son genéricos.
+Si mediante la instrucción where.
+En un desarrollo gestionado con un sistema de control de versiones, las ramas de release deben recibir actualizaciones del tipo forward integration...
+Frecuentemente.
+Frecuentemente y siempre antes de una reverse integration.
+Solo después de publicar la release.
+Nunca.
+Frecuentemente.
+En el desarrollo de una función se necesita una colección genérica que no tenga elementos duplicados y que estos estén ordenados. ¿Qué colección genérica usaría?
+SortedList<T>.
+SortedSet<T>.
+HashSet<T>.
+Dictionary<TKey, TValue>.
+SortedSet<T>.
