@@ -122,7 +122,7 @@ class Program
             // Verificar respuesta
             if (pregunta.Opciones[int.Parse(respuestaUsuario) - 1] == pregunta.RespuestaCorrecta)
             {
-                Console.WriteLine("¡Respuesta correcta!");
+                Console.WriteLine("¡Respuesta correcta!" + "\n");
             }
             else
             {
