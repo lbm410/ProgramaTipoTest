@@ -333,7 +333,7 @@ class Program
 class ChatClient
 {
     private const string OpenAIChatEndpoint = "https://api.openai.com/v1/chat/completions";
-    private const string OpenAIApiKey = "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";
+    private const string OpenAIApiKey = "key";
 
     public async Task<string> Preguntar(string pregunta)
     {
