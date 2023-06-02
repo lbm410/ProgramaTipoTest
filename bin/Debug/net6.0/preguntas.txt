@@ -1,9 +1,3 @@
-Dentro de 45 mil años, seguirá Osama siendo Gay?
-Si.
-Puede ser.
-Por supuesto.
-Osama murió de sobredosis de verga.
-Osama murió de sobredosis de verga.
 ¿Para qué se utiliza la palabra ExpectedException en C#?
 Es un atributo de un método de Test para especificar que espera lanzar una excepción.
 Es una instrucción para asignar el tipo de excepción esperada a un objeto.

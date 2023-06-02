@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+
 
 class Program
 {
@@ -267,7 +269,8 @@ class Program
 
         Pregunta preguntaSeleccionada = preguntas[numeroPregunta - 1];
 
-        Console.WriteLine("Detalles de la pregunta:");
+        Console.Clear();
+        Console.WriteLine("==== Detalles de la pregunta: ====");
         Console.WriteLine(preguntaSeleccionada.Enunciado);
         for (int i = 0; i < preguntaSeleccionada.Opciones.Count; i++)
         {
@@ -309,7 +312,10 @@ class Program
             opciones.Add(opcion);
         }
 
-        string preguntaCompleta = $"{enunciado}\n{string.Join("\n", opciones)}\nDime cuál es la respuesta correcta.";
+        Console.Write("Si se necesita, especifique el tema de la pregunta, para más precisión: ");
+        string stringAñadido = Console.ReadLine();
+
+        string preguntaCompleta = $"{enunciado}\n{string.Join("\n", opciones)}\nDime cuál es la respuesta correcta. Contesta de la forma: La respuesta correcta es: ... . La pregunta es sobre: {stringAñadido}";
 
         string respuestaChat = chatClient.Preguntar(preguntaCompleta).Result;
 
@@ -327,7 +333,7 @@ class Program
 class ChatClient
 {
     private const string OpenAIChatEndpoint = "https://api.openai.com/v1/chat/completions";
-    private const string OpenAIApiKey = "tuKey";
+    private const string OpenAIApiKey = "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";
 
     public async Task<string> Preguntar(string pregunta)
     {
@@ -337,7 +343,7 @@ class ChatClient
 
             var datos = new
             {
-                model = "gpt-3.5-turbo-0301", // Agregar el parámetro "model"
+                model = "gpt-3.5-turbo", // Agregar el parámetro "model"
                 messages = new[]
                 {
             new { role = "system", content = "You are ChatGPT, a large language model trained by OpenAI." },
